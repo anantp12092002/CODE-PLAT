@@ -1,0 +1,119 @@
+
+  
+
+
+
+    <div class="chooseLanguage" >
+  
+  <select class="form-select" id="language" aria-label="C++14" onchange="languageChange()">
+    <option  ><a href="#">C++14</a></option>
+    <option ><a href="#">Java</a></option>
+    <option ><a href="#">C++17</a></option>
+    <option ><a href="#">Python3</a></option>
+    <option ><a href="#">C</a></option>
+    
+  </select>
+</div>
+
+
+<div id="editor">
+    Hello world
+</div>
+
+
+<div>
+  <ul class="nav nav-tabs" id="input_output" >
+      <li id="input_button"><a data-toggle="tab" href="#input_data" onclick="input_button()">Input</a></li>
+      <li id="output_button"><a data-toggle="tab" href="#output_data"  onclick="output_button()">Ouput</a></li>
+      <li id="details_button" ><a data-toggle="tab" href="#details_data"  onclick="details_button()">Details</a></li>
+      <button id="submit_button" class="btn btn-primary"  >Run Code</button>    
+      <button id="close_button" type="button" onclick="navClick()" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      
+  </ul>
+    
+      
+  
+  
+  <div class="tab-content">
+      <div id="input_data" class="tab-pane fade">
+        
+         <div class="form-group" id="inputBox1">
+   
+           <textarea id="inputBox" class="form-control" id="input" rows="6" onChange="inputChange()" ></textarea>
+         </div>
+
+          
+      
+      </div>
+      <div id="output_data" class="tab-pane fade">
+      
+         <div class="form-group" id="resultBox1">
+            <textarea id="resultBox" class="form-control" id="result" rows="6" readonly ></textarea>
+         </div>
+        
+      </div>
+      <div id="details_data" class="tab-pane fade">
+      
+        <div class="form-group" id="detailBox1">
+          
+          <textarea id="detailBox" class="form-control" id="details" rows="6" readonly></textarea>
+      </div>
+      
+       
+     </div>
+
+
+      
+    </div>
+      
+    </div> 
+
+
+<!-- 
+<nav id="input_output" class="navbar navbar-inverse ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button id="input_button" type="button" onclick="input_button()" class="btn btn-link"  >
+         Input
+        </button>
+        <button id="output_button" type="button" class="btn btn-link" >
+            Output
+           </button>
+           <button id="details_button" type="button" class="btn btn-link" >
+            Details
+           </button>
+          <button id="submit_button" class="btn btn-primary"  >Run Code</button>                   
+  
+      </ul>
+    </div>
+  </nav>
+   -->
+
+
+
+
+
+    
+
+
+<script src="/socket.io/socket.io.js" defer></script>
+<script src="/script.js" type="text/javascript" defer ></script>   
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+ <script>
+    
+     var editor = ace.edit("editor");
+     editor.setTheme('ace/theme/tomorrow_night');
+          // editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/javascript");
+      
+ </script>
+
+
+
+
+
+
