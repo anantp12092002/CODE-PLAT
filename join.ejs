@@ -1,0 +1,58 @@
+<%- include('header.ejs') %>
+    
+    <div class="joincontainer">
+      <ul class="nav nav-pills" >
+        <li class="active"><a data-toggle="tab" href="#joincandidatetab">Join As Candidate</a></li>
+        <li><a data-toggle="tab" href="#joininterviewertab">Join As Interviewer</a></li>
+        <li><a data-toggle="tab" href="#createtab">Create interview link</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        
+          <div id="joincandidatetab" class="tab-pane fade in active">
+            <div class="form-group">
+              <label for="usr">Room Id</label>
+              <input type="text" placeholder="Enter RoomID" class="form-control" id="inputroomidc">
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" placeholder="Enter name" class="form-control" id="candidatename">
+            </div>
+            <button type="button" class="btn btn-danger" id="joincandidatebutton">JOIN</button>
+      </div>
+
+
+        <div id="joininterviewertab" class="tab-pane fade ">
+                <div class="form-group">
+                  <label for="usr">Room Id</label>
+                  <input type="text" placeholder="Enter RoomID" class="form-control" id="inputroomidi">
+                </div>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" placeholder="Enter name" class="form-control" id="interviewername">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password</label>
+                  <input type="password" placeholder="Enter password" class="form-control" id="joinpwd">
+                </div>
+                <button type="button" class="btn btn-danger" id="joininterviewerbutton">JOIN</button>
+        </div>
+
+
+        <div id="createtab" class="tab-pane fade">
+                  <div class="form-group">
+                    <label for="invitecode">Invite code: <span style="color: red"><%=roomId%></p></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password</label>
+                    <input type="password" placeholder="Create your password" class="form-control" id="createpwd">
+                  </div>
+                  <button type="button" class="btn btn-danger" id="createbutton">Create</button>
+        </div>
+
+
+      </div>
+    </div>
+
+  
+<%- include('footer.ejs') %>    

@@ -1,0 +1,75 @@
+<!-- <div id="question"> -->
+    <!-- <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#question1">Task description</a></li>
+    </ul> -->
+    <div style="display: flex;">
+      
+    <ul class="nav nav-tabs nav-fill" id="ex1">
+      <% for(let i =0; i<quesDes.length; i++){ %>
+        <li>
+          <a
+            id="ex1-tab-<%= i+1 %>"
+            data-toggle="tab"
+            href="#question<%= i+1 %>"
+            ><span style="color: white;">Question-<%= i+1 %></span> </a
+          >
+        </li>
+        <% } %>
+    </ul>
+    
+    <%if (user==='Interviewer') { %>
+    <i class="fa fa-plus" style="align-self: center; color:white; margin-left: 8px;" title="Add Question Tab" id="add_tab"></i>
+    <% } %>
+    </div>
+    <div class="tab-content" id="questabs">
+      <% for(let i =0; i<quesDes.length; i++){ %>
+        <div  class="tab-pane fade"  id="question<%= i+1 %>" style="background-color: #282829" >
+               <div class="row" style="display: flex; padding: 12px;">
+                    <!-- <h5 class="card-title" style="font-weight: bold; color:white;">QUESTION</h5> -->
+                    <%if (user==='Interviewer') { %>
+                        <div style="width: 100%;" class="text-left">
+                    <div class="btn-group" >
+                        <button type="button" style="margin-left: 8px;" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Categories <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#" class="category">Implementation</a></li>
+                          <li><a href="#" class="category">Dynamic Programming</a></li>
+                          <li><a href="#" class="category">Graphs</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                      <% } %>
+                </div>
+                <div>
+                    <p>
+                        <pre id="quesSec<%= i+1 %>">
+<%=quesDes[i] %>
+                        </pre>     
+                    </p>
+                  </div>
+        </div>
+      
+    <% } %>
+    </div>
+        
+<!-- </div>  -->
+
+
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
