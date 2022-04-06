@@ -1,0 +1,38 @@
+
+<link rel="stylesheet" href="/score.css">
+<div id="score-pannel">
+   
+<button class="accordion">Code Quality</button>
+
+<div class="panel">
+    <%- include('rating.ejs',{variable: 'first'}) %>
+    <textarea  class="detail form-control rounded-0 note-area" id="detail_quality" placeholder="Enter your feedback here" row=1></textarea>
+    
+</div>
+
+<button class="accordion">Problem Solving </button>
+<div class="panel">
+   
+    <%- include('rating.ejs',{variable: 'second'}) %>
+    <textarea  class="detail form-control rounded-0 note-area" id="detail_solving" placeholder="Enter your feedback here" row=1></textarea>
+    
+</div>
+
+<button class="accordion">Language Proficiency</button>
+<div class="panel">
+   
+    <%- include('rating.ejs',{variable: 'third'}) %>
+    <textarea class="detail form-control rounded-0 note-area"  id="detail_proficiency" placeholder="Enter your feedback here" row=1></textarea>
+    
+</div>
+
+<button class="accordion">Technical Communication</button>
+<div class="panel">
+    
+    <%- include('rating.ejs',{variable: 'fourth'}) %>
+    <textarea class="detail form-control rounded-0 note-area" id="detail_commnunication" placeholder="Enter your feedback here"row=1></textarea>
+   
+</div>
+
+<button type="button" class="btn btn-primary"id="submit" onclick="generatePdf()">Download</button>
+</div>
