@@ -1,0 +1,14 @@
+.joincontainer{
+
+    width: 50%;
+    height: 30%;
+    background-color: white;
+
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+#createtab .form-group{
+    margin-top: 10px;
+}

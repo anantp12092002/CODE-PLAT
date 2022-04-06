@@ -1,0 +1,318 @@
+body{
+    background-color: rgba(0, 0, 0, 0.822);
+    /* cursor:url(http://www.javascriptkit.com/dhtmltutors/cursor-hand.gif), auto; */
+    cursor: pointer;
+}
+
+#heading{
+    text-align: center;
+    font-size: 50px;
+    /* font-style: oblique; */
+
+}
+
+
+
+.question{
+
+    
+    overflow: scroll;
+    height: 80%;
+}
+
+#ex1 a:hover{
+    background-color: black;
+}
+#ex1 .active a {
+
+    background-color: black !important;
+  
+  }
+
+#smallHeader{
+     position: absolute;
+    top:6.68%;
+    left:-1%;
+    width: 100%;
+    height: 100%; 
+    
+}
+pre {
+    white-space: pre-wrap;
+    font-size: 15px;
+}
+pre::first-line{
+    font-weight: bold;
+}
+span.green{
+    color:green;
+    font-weight: bold;
+}
+span.red{
+    color:red;
+    font-weight: bold;
+}
+
+  
+
+/*.........................................compiler.ejs...........................................*/
+
+
+#inputBox{
+         
+    position: absolute;
+    overflow:scroll;
+    width: 70%;
+    left:0%;
+    top:1000%;
+    visibility: hidden;
+    background-color: rgba(5, 5, 5, 0.712);
+    z-index: 1000;
+    white-space: pre-wrap;
+    color: white;
+
+}
+
+#input_output{
+    position: absolute;
+     top: 1630%;
+     left:0%; 
+     width: 70%;
+     z-index: 1000;
+    transition: 700ms;
+    z-index: 1001;
+
+}
+
+#resultBox{
+   
+    position: absolute;
+    /* font-size: 14px; */
+    background-color: rgba(5, 5, 5, 0.712);
+    overflow:scroll;
+    width: 70%;
+    left:0%;
+    top:1000%;
+    visibility: hidden;
+    white-space: pre-wrap;
+    z-index: 1000;
+    color: white;
+    
+}
+#detailBox{
+       
+    position: absolute;
+    width: 70%;
+    left:0%;
+    overflow:scroll;
+    color:white;
+    top:1000%;
+    background-color: rgba(5, 5, 5, 0.712);
+    visibility: hidden;
+    white-space: pre-wrap;
+    color: white;
+    z-index: 1000;
+    
+}
+
+#editor { 
+    position: absolute;
+   left: 0.4%;
+   top:122%;
+    width: 100%;
+    height: 1620%;
+}
+
+#input_button{
+    position: absolute;
+    left:2%;
+      top:15% 
+
+}
+#output_button{
+    position: absolute;
+    left:15%;
+      top:15% 
+}
+#details_button{
+    position: absolute;
+    left:30%;
+      top:15% 
+}
+
+
+
+#submit_button{
+    position: absolute;
+    left:55%;
+      top:6px ;
+}
+#close_button{
+    position: absolute;
+    left:97%;
+    height: 100%;
+      top:13px ;
+      color: rgb(255, 0, 0);
+      visibility: hidden;
+      transition: 500ms;
+
+    
+}
+
+ #result{
+     font-size: larger;
+     font-family: cursive;
+
+ }
+
+/*..................................language select.......................... */
+.chooseLanguage{
+    position: absolute;
+    left:83%;
+    top:10%;
+    z-index: 3;
+    /* transform: translate(-50%, -50%); */
+}
+
+.chooseLanguage select {
+    background-color: #1320d6e0;
+    color: rgb(255, 255, 255);
+    padding: 1%;
+    height: 31px;
+    width: 107%;
+    border: none;
+    font-size: 12px;
+     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); 
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+  .chooseLanguage::before {
+    content: " ";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: -4%;
+    width: 21.7%;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+  .chooseLanguage:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .chooseLanguage select option {
+    padding: 8%;
+  }
+
+
+  #chat{
+   
+    position: fixed;
+    left: 77%;
+   top:70%;
+    height: 95%;
+    width: 19%; 
+    z-index: 5000;
+  
+} 
+
+#question_card{
+    height: 10%;
+    overflow:scroll;
+}
+
+
+
+/* ................video section.............. */
+
+#video-grid{
+    position:relative;
+}
+#video-grid1{
+    display: flex;
+    position: fixed;
+    /* height: 16%; */
+    width:20%;
+    left: 67.5%;
+    top:90%;
+   
+    z-index: 4999;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, 200px); */
+ /* grid-auto-rows: 100px; */
+}
+#video-grid2{
+    display: flex;
+    position:fixed;
+    width:48%;
+    left: 59%;
+    top:78%;
+    display: grid;
+    flex-direction: column;
+    /* grid-template-columns: 4fr 4fr; */
+    /* grid-template-rows: repeat(4, 3fr); */
+ /* grid-auto-rows: 100px; */
+}
+#video_handler{
+    position: fixed;
+    z-index: 60000;
+    height: 20px; 
+    width: 20px;
+}
+#audio_handler{
+    position: fixed;
+    z-index: 60000;
+    height: 20px; 
+    width: 20px;
+    left: 69%;
+}
+#default_image{
+    visibility:hidden;
+    position: fixed;
+    z-index: 50001;
+    height: 8.7%;
+    width: 6%;
+}
+#default_image_other{
+    visibility: hidden;
+    position: fixed;
+    z-index: 50001;
+    height: 21%;
+    width: 14.4%;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-direction: column;
+  }
+#myVideo{
+    
+    
+    border-color:blue ;
+    border-width: 2px;
+    border-style: solid;
+    width: 30%;
+    height: 100%;
+    object-fit: cover; 
+   
+    
+}
+#othersVideo{
+    
+    border-color:black;
+    border-width: 2;
+    border-style: solid;
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+} 
